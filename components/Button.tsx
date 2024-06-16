@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-export function Button({ label }:  {label:string}) {
+export function Button({ label }:  Readonly<{label:string}>) {
   return (
     <View style={styles.buttonContainer}>
       <Pressable style={styles.button} >

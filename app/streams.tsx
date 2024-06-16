@@ -1,9 +1,8 @@
-import { Image, Pressable, StyleSheet, Text } from 'react-native';
 import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from '@/components/ThemedText';
-import { Button } from '@/components/Button';
+import { ThemedView } from '@/components/ThemedView';
 import { Link } from "expo-router";
+import { Image, Pressable, StyleSheet, Text } from 'react-native';
 
 export default function Stream() {
     return (
