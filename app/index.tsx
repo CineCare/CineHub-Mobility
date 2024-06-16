@@ -1,8 +1,10 @@
-import { Image, StyleSheet } from 'react-native';
+import { Image, Pressable, StyleSheet, Text } from 'react-native';
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from '@/components/ThemedText';
 import { HelloWave } from '@/components/HelloWave';
+import { Button } from '@/components/Button';
+import { Link } from 'expo-router';
 
 export default function Index() {
   return (
@@ -21,9 +23,16 @@ export default function Index() {
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText>
-          On vous prépare une apppli aux petits oignons, sur mobiles, cette fois !
+          On vous prépare une apppli aux petits oignons, sur mobiles et tablettes, cette fois !
         </ThemedText>
+        <Link href="/streams" asChild>
+          <Pressable style={styles.linkContent}>
+            <Text style={styles.linkLabel}>Streams</Text>
+          </Pressable>
+            
+        </Link>
       </ThemedView>
+      
     </ParallaxScrollView>
   );
   
@@ -43,4 +52,21 @@ const styles = StyleSheet.create({
     height: 220,
     width: 'auto'
   },
+  linkContent: {
+    width: 320,
+    height: 68,
+    marginHorizontal: 'auto',
+    marginVertical: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 3,borderColor: '#000',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 10,
+    flexDirection: 'row',
+  },
+  linkLabel: {
+    color: '#000',
+    fontSize: 16,
+  }
 });
