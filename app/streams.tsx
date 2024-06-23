@@ -15,22 +15,22 @@ export default function Stream() {
                 resizeMode='cover'
                 />
             }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Bienvenue !</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText>
-          Test nouvelle vue
-        </ThemedText>
-        <Link href="/" asChild>
-            <Pressable style={styles.linkContent}>
-                <Text style={styles.linkLabel}>Home</Text>
-            </Pressable>
-        </Link>
-        
-      </ThemedView>
+            <ThemedView style={styles.titleContainer}>
+                <ThemedText type="title">Bienvenue !</ThemedText>
+            </ThemedView>
+            <ThemedView style={styles.stepContainer}>
+                <ThemedText>
+                Test nouvelle vue
+                </ThemedText>
+                <Link href="/" asChild>
+                    <Pressable style={styles.linkContent}>
+                        <Text style={styles.linkLabel}>Home</Text>
+                    </Pressable>
+                </Link>
+                
+            </ThemedView>
       
-    </ParallaxScrollView>
+        </ParallaxScrollView>
     )
 }
 
