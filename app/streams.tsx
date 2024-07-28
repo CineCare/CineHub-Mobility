@@ -3,6 +3,8 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Link } from "expo-router";
 import { Image, Pressable, StyleSheet, Text } from 'react-native';
+import { ResizeMode } from 'expo-av'
+import VideoPlayer from 'expo-video-player'
 
 export default function Stream() {
     return (
@@ -28,6 +30,18 @@ export default function Stream() {
                     </Pressable>
                 </Link>
                 
+            </ThemedView>
+            <ThemedView>
+                <VideoPlayer
+                    videoProps={{
+                        shouldPlay: false,
+                        resizeMode: ResizeMode.CONTAIN,
+                        // ❗ source is required https://docs.expo.io/versions/latest/sdk/video/#props
+                        source: {
+                            uri: 'https://cinehub-dev-backend.codevert.org/streams',
+                        },
+                    }}
+                />
             </ThemedView>
       
         </ParallaxScrollView>
